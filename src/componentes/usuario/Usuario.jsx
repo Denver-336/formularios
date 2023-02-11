@@ -1,8 +1,9 @@
 import { useContext } from 'react'
 import { ContextoUsuario } from '../../contexto/ContextoUsuario'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Usuario () {
+  const nav = useNavigate()
   const usuario = useContext(ContextoUsuario)
 
   if (!usuario) { return <div className='cargando'><h1>Cargando...</h1></div> }
@@ -11,8 +12,7 @@ function Usuario () {
   const cerrarSesion = () => {
     // eslint-disable-next-line no-undef
     localStorage.removeItem('tokenPrueba')
-    // eslint-disable-next-line no-undef
-    navigate('/login')
+    nav('/login')
   }
 
   return (
