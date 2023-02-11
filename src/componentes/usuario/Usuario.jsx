@@ -31,7 +31,7 @@ function Usuario () {
               </aside>
 
               <button>
-                <span><Link id='enlase' onClick={cerrarSesion}>Cerrar sesión</Link></span>
+                <span><Link id='enlase' to='/login' onClick={cerrarSesion}>Cerrar sesión</Link></span>
               </button>
             </div>
           </section>
