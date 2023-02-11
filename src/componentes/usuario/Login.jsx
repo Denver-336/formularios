@@ -1,13 +1,14 @@
 import axios from 'axios'
 import { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
+import { VITE_API_LOGIN } from '../../utils/env'
 
 function Login () {
   // PAGINA DE LOGIN QUE REALIZA UN PETICION A UNA API DE PRUEBA Y DEVUELVE UN TOKEN DE AUTENTIFICACIO
   // EL TOKEN ES ALMACENADO EN EL LOCALHOST PARA VALIDAR NUESTROS DATOS AUTOMATICAMENTE UNA VEZ LOGUEADOS
 
   // variable de entrono para la api de login
-  const LOGIN = import.meta.env.VITE_API_LOGIN
+  const LOGIN = VITE_API_LOGIN
 
   // llamanos al hook navigate, este hook nos permite redireccionar la pagina a donde queramos
   const navigate = useNavigate()

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { createContext, useEffect, useState } from 'react'
+import { VITE_API_USER } from '../utils/env'
 
 // creo un contexto
 const ContextoUsuario = createContext()
@@ -7,7 +8,7 @@ const ContextoUsuario = createContext()
 // creo un componente para proveer la informacion del contexto(todos los componentes de contexto tienen por defecto la propiedad children)
 function ProveedorContextoUsuario ({ children }) {
   // variable de entrono para la api de login
-  const LOGIN = import.meta.env.VITE_API_USER
+  const LOGIN = VITE_API_USER
 
   // creo un estado para cargar datos de ususario
   const [usuario, setUsuario] = useState()
